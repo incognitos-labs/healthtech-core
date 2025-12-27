@@ -1,0 +1,77 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --obsidian-black: #0A0E14;
+    --cyber-teal: #14B8A6;
+    --deep-charcoal: #111827;
+    --cool-gray: #94A3B8;
+    --ice-white: #F8FAFC;
+    --signal-purple: #6366F1;
+
+    --background: var(--obsidian-black);
+    --foreground: var(--ice-white);
+    --card: var(--deep-charcoal);
+    --muted: var(--deep-charcoal);
+    --muted-foreground: var(--cool-gray);
+    --border: rgba(148, 163, 184, 0.2);
+    --accent: var(--cyber-teal);
+    --accent-foreground: var(--obsidian-black);
+    --micro-accent: var(--signal-purple);
+    --radius: 0.5rem;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    background: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-inter), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+  }
+
+  a {
+    color: var(--accent);
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+  }
+
+  a:hover {
+    opacity: 0.8;
+  }
+
+  ::selection {
+    background: var(--accent);
+    color: var(--accent-foreground);
+  }
+}
+
+@layer utilities {
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+  }
+}
